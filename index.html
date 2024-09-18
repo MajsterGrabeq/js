@@ -1,0 +1,32 @@
+<html>
+ <head>
+ <title> Grabowski 1P</title>
+ <script language="JavaScript">
+ function WinOpen_z3() 
+ {
+window.open("z3_grab.html","okienko_z3","toolbar=no,directories=no,menubar=no,height=380,width=160,top=200,left=200");
+ }
+ function WinOpen_z4() 
+ {
+window.open("z4_grab.html","okienko_z4","toolbar=no,directories=no,menubar=no,height=380,width=160,top=200,left=400");
+ }
+ function WinOpen_z5() 
+ {
+window.open("z5_grab.html","okienko_z5","toolbar=no,directories=no,menubar=no,height=380,width=160,top=200,left=600");
+ }
+function okno_zamknij() 
+ {
+ window.close()
+ }
+ document.write("Szkielet zaliczeniowy JavaScript Mikołaj Grabowski klasa 2P<br>".fontcolor("red").bold().fontsize(6));
+ </script>
+ </head>
+<body>
+ <form>
+ <input type="button_z3" name="zadanie3" value="zadanie3-grabowski" onclick="WinOpen_z3(' ')">
+ <input type="button_z4" name="zadanie4" value="zadanie4-grabowski" onclick="WinOpen_z4(' ')">
+ <input type="button_z5" name="zadanie5" value="zadanie5-grabowski" onclick="WinOpen_z5(' ')">
+ <input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+ </form>
+</body>
+</html>
