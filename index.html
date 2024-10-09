@@ -2,18 +2,26 @@
  <head>
  <title> Grabowski 1P</title>
  <script language="JavaScript">
- function WinOpen_z3() 
- {
-window.open("z3_grab.html","okienko_z3","toolbar=no,directories=no,menubar=no,height=380,width=160,top=200,left=200");
- }
- function WinOpen_z4() 
- {
-window.open("z4_grab.html","okienko_z4","toolbar=no,directories=no,menubar=no,height=380,width=160,top=200,left=400");
- }
- function WinOpen_z5() 
- {
-window.open("z5_grab.html","okienko_z5","toolbar=no,directories=no,menubar=no,height=380,width=160,top=200,left=600");
- }
+function WinOpen(zadanie) {
+    let width = screen.width * 0.5;
+    let height = screen.height * 0.5;
+    
+    let left = (screen.width / 2) - (width / 2);
+    let top = (screen.height / 2) - (height / 2);
+    
+    window.open("z" + zadanie + "_grab.html", "okienko_z" + zadanie, "toolbar=no,directories=no,menubar=no,height=" + height + ",width=" + width + ",top=" + top + ",left=" + left);
+}
+
+function WinOpenKod(zadanie) {
+    let width = screen.width * 0.5;
+    let height = screen.height * 0.5;
+    
+    let left = (screen.width / 2) - (width / 2);
+    let top = (screen.height / 2) - (height / 2);
+    
+    window.open("z" + zadanie + "_kod_grab.html", "okienko_z" + zadanie, "toolbar=no,directories=no,menubar=no,height=" + height + ",width=" + width + ",top=" + top + ",left=" + left);
+}
+
 function okno_zamknij() 
  {
  window.close()
@@ -23,9 +31,42 @@ function okno_zamknij()
  </head>
 <body>
  <form>
- <input type="button_z3" name="zadanie3" value="zadanie3-grabowski" onclick="WinOpen_z3(' ')">
- <input type="button_z4" name="zadanie4" value="zadanie4-grabowski" onclick="WinOpen_z4(' ')">
- <input type="button_z5" name="zadanie5" value="zadanie5-grabowski" onclick="WinOpen_z5(' ')">
+    <hr style="border: 1px solid red; width: 100%; margin: 20px auto;">
+    <br>
+    <input type="button" value="Zadanie 1" onclick="WinOpen('1')">
+    <input type="button" value="Zadanie 2" onclick="WinOpen('2')">
+    <input type="button" value="Zadanie 3" onclick="WinOpen('3')">
+    <input type="button" value="Zadanie 4" onclick="WinOpen('4')">
+    <input type="button" value="Zadanie 5" onclick="WinOpen('5')">
+    <input type="button" value="Zadanie 6" onclick="WinOpen('6')">
+    <input type="button" value="Zadanie 7" onclick="WinOpen('7')">
+    <input type="button" value="Zadanie 8" onclick="WinOpen('8')">
+    <input type="button" value="Zadanie 9" onclick="WinOpen('9')">
+    <input type="button" value="Zadanie 10" onclick="WinOpen('10')">
+    <input type="button" value="Zadanie 11" onclick="WinOpen('11')">
+    <input type="button" value="Zadanie 12" onclick="WinOpen('12')">
+    <input type="button" value="Zadanie 13" onclick="WinOpen('13')">
+    <input type="button" value="Zadanie 14" onclick="WinOpen('14')">
+    <input type="button" value="Zadanie 15" onclick="WinOpen('15')">
+    <input type="button" value="Zadanie 16" onclick="WinOpen('16')">
+    <input type="button" value="Zadanie 17" onclick="WinOpen('17')">
+    <input type="button" value="Zadanie 18" onclick="WinOpen('18')">
+    <input type="button" value="Zadanie 19" onclick="WinOpen('19')">
+    <br>
+    <hr style="border: 1px solid red; width: 100%; margin: 20px auto;">
+    <br>
+    <input type="button" value="Zadanie 11 kod" onclick="WinOpenKod('11')">
+    <input type="button" value="Zadanie 12 kod" onclick="WinOpenKod('12')">
+    <input type="button" value="Zadanie 13 kod" onclick="WinOpenKod('13')">
+    <input type="button" value="Zadanie 14 kod" onclick="WinOpenKod('14')">
+    <input type="button" value="Zadanie 15 kod" onclick="WinOpenKod('15')">
+    <input type="button" value="Zadanie 16 kod" onclick="WinOpenKod('16')">
+    <input type="button" value="Zadanie 17 kod" onclick="WinOpenKod('17')">
+    <input type="button" value="Zadanie 18 kod" onclick="WinOpenKod('18')">
+    <input type="button" value="Zadanie 19 kod" onclick="WinOpenKod('19')">
+    <br>
+    <hr style="border: 1px solid red; width: 100%; margin: 20px auto;">
+    
  <input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
  </form>
 </body>
