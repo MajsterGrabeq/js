@@ -1,0 +1,45 @@
+<!DOCTYPE html> 
+ <head> 
+ <title> z15-kod</title> 
+ <meta charset="utf-8"> 
+ </head> 
+<body>
+<textarea cols="80" rows="35" readonly>
+    <!DOCTYPE html> 
+<head> 
+    <title>zadanie 16</title> 
+    <meta charset="utf-8"> 
+</head> 
+<body>
+<div style="color:darkblue; font-size:43px;">
+    <script language="JavaScript">
+
+    var aWartosc = prompt("Podaj pierwszą liczbę    A=", "");
+    var bWartosc = prompt("Podaj pierwszą liczbę    B=", "");
+    
+    var a = parseInt(aWartosc);
+    var b = parseInt(bWartosc);
+    
+    var aSzescian = a * a * a;
+    var bSzescian = b * b * b;
+    var aKwadrat = a * a;
+    var bKwadrat = b * b;
+    
+    var wynik = aSzescian + 3 * aKwadrat * b + 3 * a * bKwadrat + bSzescian;
+
+    document.write("(" + a + "+" + b + ")^3=" + a + "^3+3*((" + a + ")^2)+3*(" + a + ")*((" + b + ")^2)+" + b + "^3=" + aSzescian + "+" + 3 * aKwadrat * b + "+" + 3 * a * bKwadrat + "+" + bSzescian + "=" + wynik + " <br>");
+    
+    function zamknijOkno() {
+        window.close();
+    }
+
+    </script>
+    
+    <input type="button" value="Zamknij okno" onclick="zamknijOkno()"/>
+  
+</div>
+</body>
+</html>
+</textarea>
+</body>
+</html>
