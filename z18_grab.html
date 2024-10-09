@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>zad18</title>
+</head>
+<body>
+    <div style="color:navy; font-size:50px;">
+        <script language="JavaScript">
+            var a = parseFloat(prompt("Podaj pierwszą liczbę A:", ""));
+            var b = parseFloat(prompt("Podaj drugą liczbę B:", ""));
+
+            function suma_grab(a, b) {
+                return a + b;
+            }
+
+            function odejmowanie_grab(a, b) {
+                return a - b;
+            }
+
+            function mnozenie_grab(a, b) {
+                return a * b;
+            }
+
+            function od_kwadratu_grab(a, b) {
+                return [Math.pow(a, 2), Math.pow(b, 2)];
+            }
+
+            function reszta_z_dzielenia_a_przez_b_grab(a, b) {
+                return a % b;
+            }
+
+            document.write("Suma A i B: " + suma_grab(a, b) + "<br>");
+            document.write("Różnica A - B: " + odejmowanie_grab(a, b) + "<br>");
+            document.write("Iloczyn A i B: " + mnozenie_grab(a, b) + "<br>");
+            var kwadraty = od_kwadratu_grab(a, b);
+            document.write("Kwadrat A: " + kwadraty[0] + "<br>");
+            document.write("Kwadrat B: " + kwadraty[1] + "<br>");
+            document.write("Reszta z dzielenia A przez B: " + reszta_z_dzielenia_a_przez_b_grab(a, b) + "<br>");
+        </script>
+    </div>
+</body>
+</html>

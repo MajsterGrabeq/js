@@ -1,0 +1,27 @@
+<html>
+<head>
+ <meta charset="UTF-8">
+ <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+<script type="text/javascript">
+ function pole_grabowski()
+ {
+   var a_grab = parseFloat(document.getElementById('dlugosc').value);
+   var b_grab = a_grab * a_grab;
+   document.getElementById("nazwa").innerHTML ="Pole kwadratu = " + b_grab.toFixed(2) + " cm^2";
+ }
+ function obwod_grabowski()
+ {
+   var a_grab = parseFloat(document.getElementById('dlugosc').value);
+   var b_grab = 4 * a_grab;
+   document.getElementById("nazwa").innerHTML ="Obwód kwadratu = " + b_grab.toFixed(2) + " cm";
+ }
+</script>
+ <h1>Wszystko o KWADRACIE</h1><br><br>
+ Podaj długość boku: <input type="text" id="dlugosc" value="podaj długość"> cm<br><br><br>
+ <input type="button" name="pole" value="Oblicz pole" Onclick="pole_grabowski()"><br><br>
+ <input type="button" name="obwod" value="Oblicz obwod" Onclick="obwod_grabowski()"><br><br>
+ <div style="color:red;font-size:50px;" id="nazwa"></div>
+</body>
+</html>

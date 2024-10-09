@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <title>Zadanie 12</title>
+    <meta charset="utf-8">
+</head>
+<body>
+<div style="color:green;font-size:47px;">
+    <script language="JavaScript">
+        var D1_grab = prompt("Dzień 1 (D1_grab) =", "");
+        var G1_grab = prompt("Godzina 1 (G1_grab) =", "");
+        var D2_grab = prompt("Dzień 2 (D2_grab) =", "");
+        var G2_grab = prompt("Godzina 2 (G2_grab) =", "");
+        
+        var D1 = parseInt(D1_grab);
+        var G1 = parseInt(G1_grab);
+        var D2 = parseInt(D2_grab);
+        var G2 = parseInt(G2_grab);
+        
+        var roznicaDni = D1 - D2;
+        var roznicaGodzin = G1 - G2;
+        
+        var sekundyZDni = roznicaDni * 86400;
+        var sekundyZGodzin = roznicaGodzin * 3600;
+        
+        var roznicaWSekundach = sekundyZDni + sekundyZGodzin;
+        
+        document.write("Liczba sekund między dniami i godzinami: " + roznicaWSekundach + " sekund.<br>");
+    </script>
+</div>
+</body>
+</html>
