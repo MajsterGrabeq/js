@@ -1,0 +1,49 @@
+<!DOCTYPE html> 
+ <head> 
+ <title> z26-kod</title> 
+ <meta charset="utf-8"> 
+ </head> 
+<body>
+<textarea cols="80" rows="39" readonly>
+    <!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>z26</title>
+</head>
+<body>
+    <form id="trapezForm">
+        Górna podstawa (a): <input type="number" id="a" step="0.01" required><br>
+        Dolna podstawa (b): <input type="number" id="b" step="0.01" required><br>
+        Wysokość (h): <input type="number" id="h" step="0.01" required><br>
+        <button type="button" onclick="licz()">Oblicz</button>
+    </form>
+
+    <script>
+        function Pow_grabowski(a, b, h) {
+            return ((a + b) * h) / 2;
+        }
+
+        function Obw_grabowski(a, b, h) {
+            const ramie = Math.sqrt(Math.pow(Math.abs(b - a) / 2, 2) + Math.pow(h, 2));
+            return a + b + 2 * ramie;
+        }
+
+        function licz() {
+            const a = parseFloat(document.getElementById("a").value);
+            const b = parseFloat(document.getElementById("b").value);
+            const h = parseFloat(document.getElementById("h").value);
+
+            const pole = Pow_grabowski(a, b, h);
+            const obwod = Obw_grabowski(a, b, h);
+
+            document.write("Pole trapezu: " + pole.toFixed(2) + "<br>Obwód trapezu: " + obwod.toFixed(2));
+        }
+    </script>
+
+</body>
+</html>
+</textarea>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html> 
+ <head> 
+ <title> z26-kod</title> 
+ <meta charset="utf-8"> 
+ </head> 
+<body>
+<textarea cols="80" rows="46" readonly>
+    <!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>z27</title>
+    <script>
+        function Wysokosc(odl, s) {
+            return Math.sqrt(Math.pow(s, 2) - Math.pow(odl, 2));
+        }
+
+        function Kat(odl, h) {
+            return Math.atan(h / odl) * (180 / Math.PI);
+        }
+
+        function oblicz() {
+            const odl_grab = parseFloat(document.getElementById("odleglosc").value);
+            const s_grab = parseFloat(document.getElementById("droga").value);
+
+            const h_grab = Wysokosc(odl_grab, s_grab);
+            const kat_grab = Kat(odl_grab, h_grab);
+
+            document.getElementById("wysokosc").value = h_grab.toFixed(2);
+            document.getElementById("kat").value = kat_grab.toFixed(2);
+        }
+    </script>
+</head>
+<body>
+    <h2>Oblicz wysokość i kąt startu samolotu</h2>
+    <form onsubmit="event.preventDefault(); oblicz();">
+        <label for="odleglosc">Odległość między Arturem a Dawidem:</label>
+        <input type="number" id="odleglosc" required><br><br>
+        
+        <label for="droga">Droga przebyta przez samolot:</label>
+        <input type="number" id="droga" required><br><br>
+        
+        <button type="submit">Oblicz</button><br><br>
+
+        <label for="wysokosc">Wysokość samolotu:</label>
+        <input type="text" id="wysokosc" readonly><br><br>
+        
+        <label for="kat">Kąt startu samolotu:</label>
+        <input type="text" id="kat" readonly>
+    </form>
+</body>
+</html>
+</textarea>
+</body>
+</html>

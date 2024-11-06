@@ -1,0 +1,59 @@
+<!DOCTYPE html> 
+ <head> 
+ <title> z20-kod</title> 
+ <meta charset="utf-8"> 
+ </head> 
+<body>
+<textarea cols="80" rows="50" readonly>
+    <html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet">
+    <title>z20</title>
+</head>
+<body>
+    <input type="text" id="ax" placeholder="AX">
+    <input type="text" id="ay" placeholder="AY">
+    <input type="text" id="bx" placeholder="BX">
+    <input type="text" id="by" placeholder="BY">
+    <input type="text" id="cx" placeholder="CX">
+    <input type="text" id="cy" placeholder="CY">
+    <br><br>
+    <button onclick="AB_grab()">Oblicz AB</button>
+    <button onclick="BC_grab()">Oblicz BC</button>
+    <button onclick="AC_grab()">Oblicz AC</button>
+    <br><br>
+
+    <script type="text/javascript">
+        function AB_grab() {
+            var ax_grab = parseFloat(document.getElementById('ax').value);
+            var ay_grab = parseFloat(document.getElementById('ay').value);
+            var bx_grab = parseFloat(document.getElementById('bx').value);
+            var by_grab = parseFloat(document.getElementById('by').value);
+            var Dab = Math.sqrt(Math.pow((ax_grab - bx_grab), 2) + Math.pow((ay_grab - by_grab), 2));
+            document.getElementById("nazwa").innerHTML = "Długość AB = " + Dab.toFixed(2) + " cm<br>";
+        }
+
+        function BC_grab() {
+            var bx_grab = parseFloat(document.getElementById('bx').value);
+            var by_grab = parseFloat(document.getElementById('by').value);
+            var cx_grab = parseFloat(document.getElementById('cx').value);
+            var cy_grab = parseFloat(document.getElementById('cy').value);
+            var Dbc = Math.sqrt(Math.pow((bx_grab - cx_grab), 2) + Math.pow((by_grab - cy_grab), 2));
+            document.getElementById("nazwa").innerHTML = "Długość BC = " + Dbc.toFixed(2) + " cm<br>";
+        }
+
+        function AC_grab() {
+            var ax_grab = parseFloat(document.getElementById('ax').value);
+            var ay_grab = parseFloat(document.getElementById('ay').value);
+            var cx_grab = parseFloat(document.getElementById('cx').value);
+            var cy_grab = parseFloat(document.getElementById('cy').value);
+            var Dac = Math.sqrt(Math.pow((ax_grab - cx_grab), 2) + Math.pow((ay_grab - cy_grab), 2));
+            document.getElementById("nazwa").innerHTML = "Długość AC = " + Dac.toFixed(2) + " cm<br>";
+        }
+    </script>
+</body>
+</html>
+</textarea>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html> 
+ <head> 
+ <title> z25-kod</title> 
+ <meta charset="utf-8"> 
+ </head> 
+<body>
+<textarea cols="80" rows="32" readonly>
+    <!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>z25</title>
+    <style>
+        body {
+            color: #0707ad;
+            font-size: 1cm;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        var N0 = parseFloat(prompt("Podaj początkową liczbę atomów N0 (w sztukach): "));
+        var T1_2 = parseFloat(prompt("Podaj czas połowicznego rozpadu T1/2 (w latach): "));
+        var t = parseFloat(prompt("Podaj czas t (w latach): "));
+
+        var lambda = Math.log(2) / T1_2;
+        var N = N0 * Math.exp(-lambda * t);
+
+        document.write("N0 = " + N0 + " [sztuk]<br>");
+        document.write("t = " + t + " [lat]<br>");
+        document.write("T1/2 = " + T1_2 + " [lat]<br>");
+        document.write("Lambda = " + lambda.toFixed(7) + " [1/rok]<br>");
+        document.write("N = " + N.toFixed(7) + " [sztuk]<br>");
+    </script>
+
+</body>
+</html>
+</textarea>
+</body>
+</html>

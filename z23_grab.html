@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>z23</title>
+</head>
+<body>
+    <p>Obliczanie odległości od drabiny i kąta</p>
+    Podaj D= 
+    <input type="number" id="D_grab" placeholder="Podaj D" style="width: 8ch;">
+    Podaj x= 
+    <input type="number" id="x_grab" placeholder="Podaj x" style="width: 8ch;"><br><br>
+    <button onclick="oblicz()">Oblicz</button><br><br>
+    Drabina= 
+    <input type="text" id="drabina_grab" placeholder="wynik" readonly style="width: 8ch;"> 
+    Alfa= 
+    <input type="text" id="alfa_grab" placeholder="wynik" readonly style="width: 8ch;">
+    <script>
+        function drabina(D, x) {
+            return Math.sqrt(D * D + x * x);
+        }
+
+        function alfa(D, x) {
+            var alfaRadiany = Math.atan(D / x);
+            var alfaStopnie = alfaRadiany * (180 / Math.PI);
+            return alfaStopnie;
+        }
+
+        function oblicz() {
+            var D = parseFloat(document.getElementById("D_grab").value);
+            var x = parseFloat(document.getElementById("x_grab").value);
+            var wynik_drabina = drabina(D, x);
+            var wynik_alfa = alfa(D, x);
+            document.getElementById("drabina_grab").value = wynik_drabina;
+            document.getElementById("alfa_grab").value = wynik_alfa;
+        }
+    </script>
+</body>
+</html>

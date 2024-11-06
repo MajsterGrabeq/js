@@ -1,0 +1,49 @@
+<!DOCTYPE html> 
+ <head> 
+ <title> z24-kod</title> 
+ <meta charset="utf-8"> 
+ </head> 
+<body>
+<textarea cols="80" rows="39" readonly>
+    <!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obliczenia JavaScript</title>
+    <style>
+        body {
+            background-color: #d3d3d3;
+            color: #0707ad;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        var x1 = parseFloat(prompt("Podaj x1 (w stopniach): "));
+        var x2 = parseFloat(prompt("Podaj x2: "));
+        var imie = 7;
+
+        document.write("x1 = " + x1 + " &nbsp&nbsp x2 = " + x2 + "<br>");
+
+        var x1_rad = (x1 * Math.PI) / 180;
+        document.write("x1 = "+x1+" &nbsp&nbsp x1 = " + x1_rad.toFixed(2) + "<br>");
+
+        var y1 = 3 * Math.pow(x1, imie / (imie + 2));
+        document.write("y1 = " + y1.toFixed(2) + "<br>");
+
+        var y2 = 2 * Math.cos(x1_rad) + 3 * Math.sin(x1_rad);
+        document.write("y2 = " + y2.toFixed(2) + "<br>");
+
+        var y3 = Math.cbrt(Math.pow(x1, 5) + 2 * Math.pow(x2, 4) * Math.abs(x1 - x2));
+        document.write("y3 = " + y3.toFixed(2) + "<br>");
+    </script>
+
+</body>
+</html>
+</textarea>
+</body>
+</html>

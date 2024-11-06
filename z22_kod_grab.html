@@ -1,0 +1,52 @@
+<!DOCTYPE html> 
+ <head> 
+ <title> z22-kod</title> 
+ <meta charset="utf-8"> 
+ </head> 
+<body>
+<textarea cols="100" rows="42" readonly>
+    <!DOCTYPE html>
+    <html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>z22</title>
+    </head>
+    <body>
+        <h1>Oblicz pole i obwód prostokąta</h1>
+    
+        Długość a:
+        <input type="number" id="a_grab" placeholder="Podaj długość a"><br>
+    
+        Długość b:
+        <input type="number" id="b_grab" placeholder="Podaj długość b"><br><br>
+    
+        <button onclick="oblicz()">Oblicz</button>
+    
+        <h2>Wyniki</h2>
+        <p>Pole prostokąta: <input type="text" id="wyprowadz_pole_grab" readonly></p>
+        <p>Obwód prostokąta: <input type="text" id="wyprowadz_obwod_grab" readonly></p>
+    
+        <script>
+            function pole(a, b) {
+                return a * b;
+            }
+    
+            function obwod(a, b) {
+                return 2 * (a + b);
+            }
+    
+            function oblicz() {
+                var a = parseFloat(document.getElementById("a_grab").value);
+                var b = parseFloat(document.getElementById("b_grab").value);
+                var wynik_pole = pole(a, b);
+                var wynik_obwod = obwod(a, b);
+                document.getElementById("wyprowadz_pole_grab").value = wynik_pole;
+                document.getElementById("wyprowadz_obwod_grab").value = wynik_obwod;
+            }
+        </script>
+    </body>
+    </html>    
+</textarea>
+</body>
+</html>
