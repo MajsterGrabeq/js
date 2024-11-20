@@ -1,0 +1,30 @@
+<html>
+ <head>
+ <script type="text/javascript">
+ var router = {
+rodzaj: 'Router bezprzewodowy',
+czestotliwosc: '2.4 Ghz',
+anteny: '1 antena',
+router_wyswietl_grabowski: function ()
+{
+ document.write(this.rodzaj + ' ' + this.czestotliwosc + ' ' + this.anteny + '<br>')
+ }
+}
+router.router_wyswietl_grabowski();
+
+router.kolor = 'czarny';
+router.obiekt_pokaz_grabowski=function() {
+ document.write('kolor: '+this.kolor)
+}
+router.obiekt_pokaz_grabowski();
+ </script>
+ </head>
+<body>
+<br>
+nazwa obiektu: router<br>
+nazwy pól: rodzaj, czestotliwosc, anteny<br>
+nazwa metody: router_wyswietl_grabowski<br>
+nazwa pola poza obiektem: kolor<br>
+nazwa metody poza obiektem: obiekt_pokaz_grabowski<br>
+</body>
+</html>

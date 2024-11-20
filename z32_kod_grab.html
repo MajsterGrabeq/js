@@ -1,0 +1,52 @@
+<!DOCTYPE html> 
+ <head> 
+ <title> z32-kod</title> 
+ <meta charset="utf-8"> 
+ </head> 
+<body>
+<textarea cols="80" rows="44" readonly>
+    <!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+        function Router(rodzaj, czestotliwosc, anteny, kolor) {
+            this.rodzaj = rodzaj;
+            this.czestotliwosc = czestotliwosc;
+            this.anteny = anteny;
+            this.kolor = kolor;
+        }
+
+        Router.prototype.wypisz = function () {
+            document.write("Router: " + this.rodzaj + "<br>" +
+                           "Częstotliwość: " + this.czestotliwosc + "<br>" +
+                           "Anteny: " + this.anteny + "<br>" +
+                           "Kolor: " + this.kolor + "<br><br>");
+        }
+
+        Router.prototype.router_pokaz_rodzaj = function () {
+            alert("Rodzaj routera: " + this.rodzaj);
+        }
+
+        var router1 = new Router("Router bezprzewodowy", "2.4 GHz", "1 antena", "czarny");
+        var router2 = new Router("Router przewodowy", "5 GHz", "brak", "biały");
+        var router3 = new Router("Router hybrydowy", "2.4/5 GHz", "2 anteny", "srebrny");
+
+        function pokazDane() {
+            router1.wypisz();
+            router2.wypisz();
+            router3.wypisz();
+        }
+
+        function pokazRodzaj() {
+            router1.router_pokaz_rodzaj();
+        }
+    </script>
+</head>
+<body>
+    <button onclick="pokazDane()">Pokaż dane routerów</button>
+    <button onclick="pokazRodzaj()">Pokaż rodzaj routera pierwszego</button>
+</body>
+</html>
+</textarea>
+</body>
+</html>
